@@ -524,7 +524,7 @@ impl TextContext {
     }
 }
 
-pub(crate) struct FontTexture {
+pub struct FontTexture {
     atlas: Atlas,
     image_id: ImageId,
 }
