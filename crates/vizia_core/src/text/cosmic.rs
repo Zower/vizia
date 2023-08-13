@@ -531,12 +531,12 @@ pub(crate) struct FontTexture {
 
 #[derive(Copy, Clone, Debug)]
 pub struct RenderedGlyph {
-    texture_index: usize,
-    width: u32,
-    height: u32,
-    offset_x: i32,
-    offset_y: i32,
-    atlas_x: u32,
-    atlas_y: u32,
-    color_glyph: bool,
+    pub texture_index: usize,
+    pub width: u32,
+    pub height: u32,
+    pub offset_x: i32,
+    pub offset_y: i32,
+    pub atlas_x: u32,
+    pub atlas_y: u32,
+    pub color_glyph: bool,
 }
