@@ -45,7 +45,7 @@ pub struct TextContext {
     pub font_system: FontSystem,
     scale_context: ScaleContext,
     pub rendered_glyphs: FnvHashMap<CacheKey, Option<RenderedGlyph>>,
-    glyph_textures: Vec<FontTexture>,
+    pub glyph_textures: Vec<FontTexture>,
     buffers: HashMap<Entity, Editor>,
     bounds: SparseSet<BoundingBox>,
 }
