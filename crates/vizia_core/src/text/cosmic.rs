@@ -525,8 +525,8 @@ impl TextContext {
 }
 
 pub struct FontTexture {
-    atlas: Atlas,
-    image_id: ImageId,
+    pub atlas: Atlas,
+    pub image_id: ImageId,
 }
 
 #[derive(Copy, Clone, Debug)]
