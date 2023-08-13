@@ -44,7 +44,7 @@ impl Default for TextConfig {
 pub struct TextContext {
     pub(crate) font_system: FontSystem,
     scale_context: ScaleContext,
-    rendered_glyphs: FnvHashMap<CacheKey, Option<RenderedGlyph>>,
+    pub(crate) rendered_glyphs: FnvHashMap<CacheKey, Option<RenderedGlyph>>,
     glyph_textures: Vec<FontTexture>,
     buffers: HashMap<Entity, Editor>,
     bounds: SparseSet<BoundingBox>,
@@ -530,7 +530,7 @@ pub(crate) struct FontTexture {
 }
 
 #[derive(Copy, Clone, Debug)]
-pub(crate) struct RenderedGlyph {
+pub struct RenderedGlyph {
     texture_index: usize,
     width: u32,
     height: u32,

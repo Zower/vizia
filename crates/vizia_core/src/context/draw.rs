@@ -1,4 +1,4 @@
-use cosmic_text::{FamilyOwned, FontSystem};
+use cosmic_text::{CacheKey, FamilyOwned, FontSystem};
 use femtovg::{ImageId, Transform2D};
 use std::any::{Any, TypeId};
 
@@ -12,7 +12,7 @@ use crate::model::ModelDataStore;
 use crate::prelude::*;
 use crate::resource::{ImageOrId, ResourceManager};
 use crate::style::{ImageOrGradient, IntoTransform, Style};
-use crate::text::{TextConfig, TextContext};
+use crate::text::{RenderedGlyph, TextConfig, TextContext};
 use crate::vg::{Paint, Path};
 use vizia_input::{Modifiers, MouseState};
 use vizia_style::{
@@ -289,6 +289,10 @@ impl<'a> DrawContext<'a> {
 
     pub fn font_system(&mut self) -> &mut FontSystem {
         &mut self.text_context.font_system
+    }
+
+    pub fn rendered_glyphs(&mut self) -> &mut FnvHashMap<CacheKey, Option<RenderedGlyph>> {
+        &mut self.text_context.rendered_glyphs
     }
 
     get_length_property!(
