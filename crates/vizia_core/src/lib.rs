@@ -102,6 +102,4 @@ pub mod prelude {
     pub use morphorm::Units::*;
     pub use morphorm::{LayoutType, PositionType, Units};
     pub use unic_langid::{langid, LanguageIdentifier};
-
-    pub use super::text
 }
