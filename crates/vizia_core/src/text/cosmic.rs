@@ -42,7 +42,7 @@ impl Default for TextConfig {
 }
 
 pub struct TextContext {
-    font_system: FontSystem,
+    pub(crate) font_system: FontSystem,
     scale_context: ScaleContext,
     rendered_glyphs: FnvHashMap<CacheKey, Option<RenderedGlyph>>,
     glyph_textures: Vec<FontTexture>,

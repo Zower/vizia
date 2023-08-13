@@ -1,4 +1,4 @@
-use cosmic_text::FamilyOwned;
+use cosmic_text::{FamilyOwned, FontSystem};
 use femtovg::{ImageId, Transform2D};
 use std::any::{Any, TypeId};
 
@@ -285,6 +285,10 @@ impl<'a> DrawContext<'a> {
     /// Function to convert physical pixels to logical points.
     pub fn physical_to_logical(&self, physical: f32) -> f32 {
         self.style.physical_to_logical(physical)
+    }
+
+    pub fn font_system(&mut self) -> &mut FontSystem {
+        &mut self.text_context.font_system
     }
 
     get_length_property!(
