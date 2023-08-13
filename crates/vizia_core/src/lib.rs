@@ -23,7 +23,7 @@ pub mod modifiers;
 pub mod resource;
 pub mod style;
 mod systems;
-pub(crate) mod text;
+pub mod text;
 #[doc(hidden)]
 pub mod tree;
 pub mod util;
@@ -102,4 +102,6 @@ pub mod prelude {
     pub use morphorm::Units::*;
     pub use morphorm::{LayoutType, PositionType, Units};
     pub use unic_langid::{langid, LanguageIdentifier};
+
+    pub use super::text
 }
