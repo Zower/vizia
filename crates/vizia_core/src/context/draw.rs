@@ -287,6 +287,10 @@ impl<'a> DrawContext<'a> {
         self.style.physical_to_logical(physical)
     }
 
+    pub fn text_context(&mut self) -> &mut TextContext {
+        self.text_context
+    }
+
     pub fn font_system(&mut self) -> &mut FontSystem {
         &mut self.text_context.font_system
     }
